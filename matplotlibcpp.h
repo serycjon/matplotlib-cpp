@@ -499,7 +499,7 @@ namespace matplotlibcpp {
 		PyObject* res = PyObject_CallObject(detail::_interpreter::get().s_python_function_save, args);
 		if(!res) throw std::runtime_error("Call to save() failed.");
 
-		Py_DECREF(pyfilename);
+		/* Py_DECREF(pyfilename); */
 		Py_DECREF(args);
 		Py_DECREF(res);
 	}
